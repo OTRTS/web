@@ -6,4 +6,7 @@ const DB_NAME = 'ontheroadtosafety';
 const DB_USER = 'root';
 const DB_PASS = '';
 
-const GEMINI_API_KEY = 'AIzaSyDZxuSgT08SYPQOJ1MEoqHt2rciOQGZs7w';
+if (!defined('GEMINI_API_KEY')) {
+    $key = getenv('GEMINI_API_KEY');
+    define('GEMINI_API_KEY', $key !== false ? (string) $key : '');
+}

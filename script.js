@@ -84,6 +84,15 @@ const initAuthNav = () => {
   const authItems = $$("[data-auth]");
   if (!authItems.length) return;
 
+  const host = String(location.hostname || "");
+  const isStaticHost = /\.github\.io$/i.test(host);
+  if (isStaticHost) {
+    authItems.forEach((el) => {
+      el.hidden = true;
+    });
+    return;
+  }
+
   const endpoints = ["./login.php?status=1", "../login.php?status=1", "../../login.php?status=1"];
 
   const fetchStatus = async () => {
