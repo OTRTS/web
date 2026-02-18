@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b2a6f" />
+    <title>On The Road To Safety | Capacitación y Gestión de Seguridad Vial</title>
+    <meta
+      name="description"
+      content="Capacitación profesional para conductores y empresas: manejo defensivo, cumplimiento normativo y reducción de riesgos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260216-14" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="page-loader" id="page-loader" role="status" aria-live="polite">
+      <div class="loader-card">
+        <img class="loader-logo" src="./assets/img/logo.png" alt="On The Road To Safety" />
+        <div class="loader-bar" aria-hidden="true"></div>
+        <span class="sr-only">Cargando…</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="On The Road To Safety">
+          <img class="brand-logo" src="./assets/img/logo.png" alt="On The Road To Safety" />
+        </a>
+
+        <div class="nav-area">
+          <nav class="site-nav-primary" aria-label="Navegación principal">
+            <a href="#inicio">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Inicio
+            </a>
+            <a href="#cursos">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 19.5V6a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2v-.5z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M8 8h7M8 12h7M8 16h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cursos
+            </a>
+            <a class="nav-admin" href="./registrar-certificado.php" data-auth="admin" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Registrar certificado
+            </a>
+            <a href="./Certificados/">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 8h6M9 12h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Certificados
+            </a>
+            <a class="nav-admin" href="./ver-certificados.php" data-auth="user" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M8 9h8M8 13h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Ver certificados
+            </a>
+            <a class="nav-admin" href="./cotizaciones.php" data-auth="admin" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 7h18s-3 0-3-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cotizaciones
+              <span class="nav-badge js-cotizaciones-badge" hidden>0</span>
+            </a>
+            <a href="#cotizacion">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 7h10v14H7z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 3h6v4H9zM9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cotización
+            </a>
+            <a class="nav-cta" href="#contacto">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m21 8-9 6L3 8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Contacto
+            </a>
+          </nav>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-more" aria-label="Abrir menú">
+            <svg class="nav-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+
+          <div class="nav-more" id="site-nav-more" role="dialog" aria-label="Menú" hidden>
+            <a href="./login.php" data-auth="guest">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17 8V7a5 5 0 0 0-10 0v1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M7 11h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Iniciar sesión
+            </a>
+            <a href="./logout.php" data-auth="user" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17 8V7a5 5 0 0 0-10 0v1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path
+                  d="M7 11h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Cerrar sesión
+            </a>
+            <a class="nav-admin" href="./registrar-certificado.php" data-auth="admin" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Registrar certificado
+            </a>
+            <a class="nav-admin" href="./ver-certificados.php" data-auth="user" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M8 9h8M8 13h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Ver certificados
+            </a>
+            <a class="nav-admin" href="./usuarios.php" data-auth="admin" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Usuarios
+            </a>
+            <a class="nav-admin" href="./cotizaciones.php" data-auth="admin" hidden>
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 7h18s-3 0-3-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cotizaciones
+              <span class="nav-badge js-cotizaciones-badge" hidden>0</span>
+            </a>
+            <a href="#quienes-somos">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M22 21v-2a4 4 0 0 0-3-3.87"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M16 3.13a4 4 0 0 1 0 7.75"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Quiénes somos
+            </a>
+            <a href="#metodologia">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 20a8 8 0 1 0-8-8 8 8 0 0 0 8 8z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M12 6v6l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Metodología
+            </a>
+            <a href="#tips">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M8 9h8M8 13h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Tips
+            </a>
+
+            <a href="#cursos">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 19.5V6a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2v-.5z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M8 8h7M8 12h7M8 16h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cursos
+            </a>
+            <a href="./Certificados/">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 8h6M9 12h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Certificados
+            </a>
+            <a href="#cotizacion">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 7h10v14H7z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 3h6v4H9zM9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Cotización
+            </a>
+            <a class="nav-more-cta" href="#contacto">
+              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m21 8-9 6L3 8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Contacto
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal" data-reveal="left">
+            <p class="eyebrow">Capacitación corporativa • Seguridad vial • Riesgo controlado</p>
+            <h1>
+              Eleva el desempeño de tu transporte con
+              <span class="accent">seguridad</span> y
+              <span class="accent">cumplimiento</span>
+            </h1>
+            <p class="lead">
+              Programas prácticos y medibles para fortalecer hábitos de conducción, cumplir normativa y reducir incidentes. Diseñado
+              para empresas que necesitan resultados en campo.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#cotizacion">Solicitar cotización</a>
+              <a class="btn btn-secondary" href="#cursos">Ver cursos</a>
+            </div>
+            <div class="hero-badges">
+              <div class="badge">
+                <span class="badge-kpi">500+</span>
+                <span class="badge-label">conductores capacitados</span>
+              </div>
+              <div class="badge">
+                <span class="badge-kpi">15k+</span>
+                <span class="badge-label">horas de entrenamiento</span>
+              </div>
+              <div class="badge">
+                <span class="badge-kpi">80%</span>
+                <span class="badge-label">reducción estimada de riesgo</span>
+              </div>
+            </div>
+            <div class="hero-social">
+              <div class="social-links" aria-label="Redes sociales">
+                <a class="social-link" href="https://www.tiktok.com/@otrts7" target="_blank" rel="noreferrer" aria-label="TikTok">
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      fill="currentColor"
+                      d="M16.8 4.6c1 1.2 2.3 2 3.8 2.2v3.2c-1.8-.1-3.4-.7-4.8-1.7v7.1c0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6s2.9-6.6 6.6-6.6c.4 0 .8 0 1.2.1v3.4c-.4-.2-.8-.3-1.2-.3-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.2-1.4 3.2-3.2V2h3.4c.1.9.4 1.8 1 2.6Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.facebook.com/OnTheRoadToSafety"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      fill="currentColor"
+                      d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.4v3h2.7v8h3.4Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/otrts.bo/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      fill="currentColor"
+                      d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3Zm0 7.7A3 3 0 1 1 15 12a3 3 0 0 1-3 3Zm5.9-7.9a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1ZM20 12c0-1.6 0-3.2-.1-4.8a4.8 4.8 0 0 0-2.7-3.4C15.9 3.2 14.3 3.2 12 3.2s-3.9 0-5.2.6A4.8 4.8 0 0 0 4.1 7.2C4 8.8 4 10.4 4 12s0 3.2.1 4.8a4.8 4.8 0 0 0 2.7 3.4c1.3.6 2.9.6 5.2.6s3.9 0 5.2-.6a4.8 4.8 0 0 0 2.7-3.4c.1-1.6.1-3.2.1-4.8Zm-1.7 4.7a3.1 3.1 0 0 1-1.8 2.4c-1 .4-2.4.4-4.5.4s-3.5 0-4.5-.4a3.1 3.1 0 0 1-1.8-2.4c-.1-1.5-.1-3.1-.1-4.7s0-3.2.1-4.7a3.1 3.1 0 0 1 1.8-2.4c1-.4 2.4-.4 4.5-.4s3.5 0 4.5.4a3.1 3.1 0 0 1 1.8 2.4c.1 1.5.1 3.1.1 4.7s0 3.2-.1 4.7Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://api.whatsapp.com/send/?phone=59177787803&text=Hola%20On%20The%20Road%20To%20Safety.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20detallada%20sobre%20sus%20cursos%20de%20Manejo%20Defensivo.%20%C2%BFPodr%C3%ADan%20enviarme%20los%20horarios%20y%20costos%20disponibles?%20Gracias."
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      fill="currentColor"
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card reveal" data-reveal="right">
+            <div class="hero-card-top">
+              <h2>Un estándar de seguridad para tu operación</h2>
+              <p>
+                Entrenamiento basado en evaluación, práctica supervisada y seguimiento. Ideal para empresas de transporte, logística,
+                construcción y operaciones de alto riesgo.
+              </p>
+            </div>
+            <ul class="checklist">
+              <li>Diagnóstico inicial y medición</li>
+              <li>Entrenamiento práctico en ruta</li>
+              <li>Certificación y evidencias</li>
+              <li>Plan de mejora y seguimiento</li>
+            </ul>
+            <div class="hero-card-actions">
+              <a class="btn btn-ghost" href="#metodologia">Cómo trabajamos</a>
+              <a class="btn btn-primary" href="#contacto">Hablar con un asesor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quienes-somos">
+        <div class="container">
+          <div class="section-head reveal team-head" data-reveal="left">
+            <h2 class="team-title">NUESTRO EQUIPO</h2>
+          </div>
+
+          <div class="team-photo reveal" data-reveal="up" tabindex="0">
+            <img
+              class="team-photo-img"
+              src="./assets/img/EQUIPO.jpg"
+              alt="Equipo de trabajo"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="team-photo-overlay" aria-hidden="true"></div>
+            <div class="team-photo-card" aria-hidden="true">
+              <h3>Construimos cultura de seguridad en la carretera</h3>
+              <p>
+                On The Road To Safety acompaña a empresas a transformar comportamientos críticos en hábitos seguros con entrenamiento
+                práctico, metodología comprobada y reportes claros.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <article class="mv-flip reveal" data-reveal="left" tabindex="0" aria-label="Misión">
+              <div class="mv-flip__content">
+                <div class="mv-flip__face mv-flip__face--cover">
+                  <div class="mv-flip__cover-inner">
+                    <div class="mv-flip__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                        <path
+                          d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                    <strong class="mv-flip__label">Misión</strong>
+                    <span class="mv-flip__hint">Pasa el mouse</span>
+                  </div>
+                </div>
+                <div class="mv-flip__face mv-flip__face--detail">
+                  <div class="mv-flip__orbs" aria-hidden="true">
+                    <span class="mv-flip__orb mv-flip__orb--a"></span>
+                    <span class="mv-flip__orb mv-flip__orb--b"></span>
+                    <span class="mv-flip__orb mv-flip__orb--c"></span>
+                  </div>
+                  <div class="mv-flip__detail">
+                    <span class="mv-flip__badge">OTRTS</span>
+                    <p class="mv-flip__title">Misión</p>
+                    <p class="mv-flip__text">
+                      Fortalecer la seguridad vial de personas y empresas mediante capacitación técnica, entrenamiento práctico y mejora
+                      continua, reduciendo incidentes y protegiendo vidas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mv-flip reveal" data-reveal="up" tabindex="0" aria-label="Visión">
+              <div class="mv-flip__content">
+                <div class="mv-flip__face mv-flip__face--cover">
+                  <div class="mv-flip__cover-inner">
+                    <div class="mv-flip__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                        <path
+                          d="M12 5c-5.5 0-9.5 5.2-9.5 7s4 7 9.5 7 9.5-5.2 9.5-7-4-7-9.5-7Zm0 11a4 4 0 1 1 4-4 4 4 0 0 1-4 4Z"
+                          fill="currentColor"
+                        />
+                        <path d="M12 10a2 2 0 1 0 2 2 2 2 0 0 0-2-2Z" fill="currentColor" />
+                      </svg>
+                    </div>
+                    <strong class="mv-flip__label">Visión</strong>
+                    <span class="mv-flip__hint">Pasa el mouse</span>
+                  </div>
+                </div>
+                <div class="mv-flip__face mv-flip__face--detail">
+                  <div class="mv-flip__orbs" aria-hidden="true">
+                    <span class="mv-flip__orb mv-flip__orb--a"></span>
+                    <span class="mv-flip__orb mv-flip__orb--b"></span>
+                    <span class="mv-flip__orb mv-flip__orb--c"></span>
+                  </div>
+                  <div class="mv-flip__detail">
+                    <span class="mv-flip__badge">OTRTS</span>
+                    <p class="mv-flip__title">Visión</p>
+                    <p class="mv-flip__text">
+                      Ser el aliado líder en formación y gestión de seguridad vial para empresas de transporte, reconocido por resultados
+                      medibles, cumplimiento y excelencia operativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="mv-flip reveal" data-reveal="right" tabindex="0" aria-label="Historia">
+              <div class="mv-flip__content">
+                <div class="mv-flip__face mv-flip__face--cover">
+                  <div class="mv-flip__cover-inner">
+                    <div class="mv-flip__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                        <path
+                          d="M7 3h10a2 2 0 0 1 2 2v16H7a2 2 0 0 0-2 2V5a2 2 0 0 1 2-2Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M7 21h12a2 2 0 0 1-2 2H7a2 2 0 0 1 0-4Z"
+                          fill="currentColor"
+                          opacity=".55"
+                        />
+                      </svg>
+                    </div>
+                    <strong class="mv-flip__label">Historia</strong>
+                    <span class="mv-flip__hint">Pasa el mouse</span>
+                  </div>
+                </div>
+                <div class="mv-flip__face mv-flip__face--detail">
+                  <div class="mv-flip__orbs" aria-hidden="true">
+                    <span class="mv-flip__orb mv-flip__orb--a"></span>
+                    <span class="mv-flip__orb mv-flip__orb--b"></span>
+                    <span class="mv-flip__orb mv-flip__orb--c"></span>
+                  </div>
+                  <div class="mv-flip__detail">
+                    <span class="mv-flip__badge">OTRTS</span>
+                    <p class="mv-flip__title">Historia</p>
+                    <p class="mv-flip__text">
+                      Nacimos para cerrar la brecha entre la teoría y la realidad de la vía. Hoy ayudamos a equipos en campo a elevar
+                      estándares, cumplir normas y operar con confianza.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="team-feature grid-2">
+            <div class="team-feature-media reveal" data-reveal="left">
+              <video
+                class="team-feature-video"
+                controls
+                controlsList="nodownload noplaybackrate"
+                muted
+                playsinline
+                preload="metadata"
+                loop
+                data-autoplay="inview"
+                aria-label="Video institucional"
+              >
+                <source src="./assets/video/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <article class="team-feature-copy reveal" data-reveal="right">
+              <h3>Liderazgo en Gestión de Riesgos y Seguridad Logística</h3>
+              <p>
+                En On The Road to Safety (respaldo de Alvaro Pérez) protegemos tu operación con control, tecnología y evidencia.
+              </p>
+              <p><strong>Propuesta de valor</strong></p>
+              <ul class="team-feature-list">
+                <li><strong>Prevención en ruta:</strong> análisis de datos y control de riesgos.</li>
+                <li><strong>Fatiga y alcoholemia:</strong> controles digitales con LifeLoc.</li>
+                <li><strong>Torre de Control:</strong> monitoreo satelital y logístico en tiempo real.</li>
+                <li><strong>Trazabilidad:</strong> evidencias para auditoría y cumplimiento.</li>
+              </ul>
+              <p class="team-feature-quote">
+                "Que cada producto llegue intacto, eficiente y bajo estándares exigentes."
+              </p>
+              <p><strong>Resultados</strong></p>
+              <ul class="team-feature-list">
+                <li><strong>Menos pérdidas:</strong> menor siniestralidad y mermas.</li>
+                <li><strong>Mejores tiempos:</strong> planificación inteligente y cumplimiento de lead time.</li>
+                <li><strong>Más control:</strong> supervisión y reportes claros.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="cursos">
+        <div class="container">
+          <div class="section-head reveal" data-reveal="left">
+            <p class="eyebrow">Cursos</p>
+            <h2>Módulos especializados de entrenamiento</h2>
+            <p class="muted">Haz clic en un curso para ver el PDF.</p>
+          </div>
+
+          <div class="course-grid">
+            <article class="course-card reveal" data-reveal="left" data-pdf="./pdf/manejo-defensivo.pdf" tabindex="0" role="link">
+              <div class="course-icon" aria-hidden="true"></div>
+              <h3>Manejo defensivo</h3>
+              <p>Prevención de riesgos en ruta, control de velocidad, distancia segura y conducción predictiva.</p>
+              <div class="course-actions">
+                <a class="btn btn-link" href="./pdf/manejo-defensivo.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              </div>
+            </article>
+
+            <article class="course-card reveal" data-reveal="up" data-pdf="./pdf/eficiencia-transporte.pdf" tabindex="0" role="link">
+              <div class="course-icon" aria-hidden="true"></div>
+              <h3>Eficiencia del transporte</h3>
+              <p>Buenas prácticas para reducir consumo, desgaste, eventos de riesgo y costos operativos.</p>
+              <div class="course-actions">
+                <a class="btn btn-link" href="./pdf/eficiencia-transporte.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              </div>
+            </article>
+
+            <article
+              class="course-card reveal"
+              data-reveal="up"
+              data-pdf="./pdf/logistica-distribucion.pdf"
+              tabindex="0"
+              role="link"
+            >
+              <div class="course-icon" aria-hidden="true"></div>
+              <h3>Logística de distribución</h3>
+              <p>Planificación segura de rutas, gestión de tiempos, operación bajo presión y control de riesgos.</p>
+              <div class="course-actions">
+                <a class="btn btn-link" href="./pdf/logistica-distribucion.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              </div>
+            </article>
+
+            <article class="course-card reveal" data-reveal="right" data-pdf="./pdf/cumplimiento-normativo.pdf" tabindex="0" role="link">
+              <div class="course-icon" aria-hidden="true"></div>
+              <h3>Cumplimiento normativo</h3>
+              <p>Estándares internos, auditorías, evidencias, políticas, procedimientos y cultura de cumplimiento.</p>
+              <div class="course-actions">
+                <a class="btn btn-link" href="./pdf/cumplimiento-normativo.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="metodologia">
+        <div class="container">
+          <div class="section-head reveal" data-reveal="left">
+            <p class="eyebrow">Metodología</p>
+            <h2>El camino al éxito: metodología comprobada</h2>
+            <p class="muted">Un proceso claro de diagnóstico, práctica y seguimiento que se adapta a tu operación.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <div class="timeline-item reveal" data-reveal="left">
+              <div class="timeline-dot">1</div>
+              <div class="timeline-card">
+                <h3>Diagnóstico de riesgos</h3>
+                <p>Evaluamos el estado del transporte, historial de incidentes y perfiles de conducción para detectar áreas críticas.</p>
+              </div>
+            </div>
+            <div class="timeline-item align-right reveal" data-reveal="right">
+              <div class="timeline-dot">2</div>
+              <div class="timeline-card">
+                <h3>Entrenamiento práctico</h3>
+                <p>Sesiones intensivas en campo, ejercicios guiados y simulación de escenarios reales bajo supervisión.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" data-reveal="left">
+              <div class="timeline-dot">3</div>
+              <div class="timeline-card">
+                <h3>Certificación</h3>
+                <p>Validación de competencias con evidencias, evaluaciones y credenciales alineadas a estándares.</p>
+              </div>
+            </div>
+            <div class="timeline-item align-right reveal" data-reveal="right">
+              <div class="timeline-dot">4</div>
+              <div class="timeline-card">
+                <h3>Monitoreo continuo</h3>
+                <p>Seguimiento post-capacitación con indicadores, planes de mejora y apoyo para mantener hábitos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="tips">
+        <div class="container">
+          <div class="section-head reveal" data-reveal="left">
+            <p class="eyebrow">Contenido</p>
+            <h2>Tips de manejo defensivo</h2>
+            <p class="muted">Videos cortos en formato vertical.</p>
+          </div>
+
+          <div class="video-carousel reveal" data-reveal="up" id="tips-carousel">
+            <button class="carousel-nav carousel-nav-prev" type="button" aria-label="Anterior video" data-carousel-prev>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M15 6l-6 6 6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div class="carousel-viewport" data-carousel-viewport>
+              <div class="carousel-track">
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 2"
+                  >
+                    <source src="./assets/video/2.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 3"
+                  >
+                    <source src="./assets/video/3.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 4"
+                  >
+                    <source src="./assets/video/4.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 5"
+                  >
+                    <source src="./assets/video/5.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 6"
+                  >
+                    <source src="./assets/video/6.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 7"
+                  >
+                    <source src="./assets/video/7.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 8"
+                  >
+                    <source src="./assets/video/8.mp4" type="video/mp4" />
+                  </video>
+                </article>
+                <article class="carousel-card" data-carousel-item>
+                  <video
+                    class="carousel-video"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    playsinline
+                    preload="metadata"
+                    data-lock-rate="1"
+                    aria-label="Video 9"
+                  >
+                    <source src="./assets/video/9.mp4" type="video/mp4" />
+                  </video>
+                </article>
+              </div>
+            </div>
+
+            <button class="carousel-nav carousel-nav-next" type="button" aria-label="Siguiente video" data-carousel-next>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M9 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div class="carousel-dots" aria-label="Selector de videos" data-carousel-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cotizacion">
+        <div class="container">
+          <div class="section-head reveal" data-reveal="left">
+            <p class="eyebrow">Cotización</p>
+            <h2>Solicita una propuesta para tu transporte</h2>
+            <p class="muted">
+              Completa el formulario y registraremos tu solicitud para contactarte con una propuesta.
+            </p>
+          </div>
+
+          <div class="quote-layout">
+            <form class="form card reveal" data-reveal="left" id="quote-form" autocomplete="on">
+              <div class="form-row">
+                <div class="field">
+                  <label for="empresa">Empresa</label>
+                  <input id="empresa" name="empresa" type="text" required placeholder="Ej. Nombre de tu empresa" />
+                </div>
+                <div class="field">
+                  <label for="cargo">Cargo</label>
+                  <input id="cargo" name="cargo" type="text" placeholder="Ej. Jefe de Transporte" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" required placeholder="Nombres y apellidos" />
+                </div>
+                <div class="field">
+                  <label for="correo">Correo</label>
+                  <input id="correo" name="correo" type="email" required placeholder="tu@empresa.com" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="telefono">Teléfono</label>
+                  <input id="telefono" name="telefono" type="tel" placeholder="+591 xxxxxxx" />
+                </div>
+                <div class="field">
+                  <label for="conductores">Conductores / unidades</label>
+                  <input id="conductores" name="conductores" type="number" min="1" placeholder="Ej. 25" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="curso">Curso de interés</label>
+                  <select id="curso" name="curso">
+                    <option value="Manejo defensivo">Manejo defensivo</option>
+                    <option value="Eficiencia del transporte">Eficiencia del transporte</option>
+                    <option value="Logística de distribución">Logística de distribución</option>
+                    <option value="Cumplimiento normativo">Cumplimiento normativo</option>
+                    <option value="Programa a la medida">Programa a la medida</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="ciudad">Ciudad</label>
+                  <input id="ciudad" name="ciudad" type="text" placeholder="Ej. La Paz" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu operación y necesidades"></textarea>
+              </div>
+
+              <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+                <button class="btn btn-secondary" type="button" id="fill-from-course">Usar curso seleccionado</button>
+              </div>
+              <p class="form-note muted" id="quote-note" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="side-card reveal" data-reveal="right">
+              <div class="side-card-top">
+                <h3>Soporte directo</h3>
+                <p class="muted">Tiempo de respuesta típico: 24–48 horas hábiles.</p>
+              </div>
+              <div class="side-card-body">
+                <div class="contact-chip">
+                  <button
+                    class="avatar avatar-btn"
+                    type="button"
+                    id="instructor-avatar"
+                    aria-label="Ver foto del instructor"
+                    aria-haspopup="dialog"
+                    aria-controls="instructor-modal"
+                    aria-expanded="false"
+                  ></button>
+                  <div>
+                    <p class="chip-name">Instructor certificado (NSC)</p>
+                    <p class="chip-sub muted">JHON NEVER MANCACHI MAYTA</p>
+                  </div>
+                </div>
+                <div class="cert">
+                  <span class="cert-dot alt" aria-hidden="true"></span>
+                  <div>
+                    <div class="cert-title-row">
+                      <p class="cert-title">Instructor certificado (NSC)</p>
+                      <a
+                        class="cert-badge-link"
+                        href="https://www.nsc.org/instructor-lookup/results?InstructorID=2306066"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Verificar instructor en NSC"
+                      >
+                        <img
+                          class="cert-badge"
+                          src="./assets/img/nsc-Member-rgb.png"
+                          alt="NSC"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+                    </div>
+                    <p class="muted">
+                      JHON NEVER MANCACHI MAYTA • DDC Professional Truck Driver Instructor LatAm.
+                      <a href="https://www.nsc.org/instructor-lookup/results?InstructorID=2306066" target="_blank" rel="noreferrer"
+                        >Verificar en NSC</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini">
+                    <span class="mini-label muted">Correo</span>
+                    <a href="mailto:cotizaciones@ontheroadtosafety.com">cotizaciones@ontheroadtosafety.com</a>
+                  </div>
+                  <div class="mini">
+                    <span class="mini-label muted">Teléfono</span>
+                    <a href="tel:+59177787803">+591 77787803</a>
+                  </div>
+                </div>
+              </div>
+              <div class="side-card-bottom">
+                <div class="cert">
+                  <span class="cert-dot" aria-hidden="true"></span>
+                  <div>
+                    <p class="cert-title">Evidencias y reportes</p>
+                    <p class="muted">Indicadores de participación, evaluación y mejora.</p>
+                  </div>
+                </div>
+                <div class="cert">
+                  <span class="cert-dot alt" aria-hidden="true"></span>
+                  <div>
+                    <p class="cert-title">Cumplimiento operativo</p>
+                    <p class="muted">Contenido alineado a políticas, procedimientos y normativa.</p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="contacto">
+        <div class="container contact-cta">
+          <div class="contact-copy reveal" data-reveal="left">
+            <h2>¿Listo para asegurar el futuro de tu transporte?</h2>
+            <p>Agenda una llamada y recibe una propuesta alineada a tu operación.</p>
+          </div>
+          <form class="mini-form reveal" data-reveal="right" id="contact-form">
+            <label class="sr-only" for="contact-email">Correo</label>
+            <input id="contact-email" type="email" required placeholder="tu@empresa.com" />
+            <button class="btn btn-primary" type="submit">Contactar ahora</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="./assets/img/logo.png" alt="On The Road To Safety" />
+          <p class="muted">
+            Capacitación profesional y gestión de seguridad vial para empresas. Resultados medibles, enfoque práctico y mejora
+            continua.
+          </p>
+          <div class="social-links" aria-label="Redes sociales">
+            <a
+              class="social-link"
+              href="https://www.facebook.com/OnTheRoadToSafety"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.4v3h2.7v8h3.4Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.tiktok.com/@otrts7"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M16.8 4.6c1 1.2 2.3 2 3.8 2.2v3.2c-1.8-.1-3.4-.7-4.8-1.7v7.1c0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6s2.9-6.6 6.6-6.6c.4 0 .8 0 1.2.1v3.4c-.4-.2-.8-.3-1.2-.3-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2 3.2-1.4 3.2-3.2V2h3.4c.1.9.4 1.8 1 2.6Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/otrts.bo/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3Zm0 7.7A3 3 0 1 1 15 12a3 3 0 0 1-3 3Zm5.9-7.9a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1ZM20 12c0-1.6 0-3.2-.1-4.8a4.8 4.8 0 0 0-2.7-3.4C15.9 3.2 14.3 3.2 12 3.2s-3.9 0-5.2.6A4.8 4.8 0 0 0 4.1 7.2C4 8.8 4 10.4 4 12s0 3.2.1 4.8a4.8 4.8 0 0 0 2.7 3.4c1.3.6 2.9.6 5.2.6s3.9 0 5.2-.6a4.8 4.8 0 0 0 2.7-3.4c.1-1.6.1-3.2.1-4.8Zm-1.7 4.7a3.1 3.1 0 0 1-1.8 2.4c-1 .4-2.4.4-4.5.4s-3.5 0-4.5-.4a3.1 3.1 0 0 1-1.8-2.4c-.1-1.5-.1-3.1-.1-4.7s0-3.2.1-4.7a3.1 3.1 0 0 1 1.8-2.4c1-.4 2.4-.4 4.5-.4s3.5 0 4.5.4a3.1 3.1 0 0 1 1.8 2.4c.1 1.5.1 3.1.1 4.7s0 3.2-.1 4.7Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Secciones</h3>
+          <a href="#quienes-somos">Quiénes somos</a>
+          <a href="#cursos">Cursos</a>
+          <a href="./Certificados/">Certificados</a>
+          <a href="#metodologia">Metodología</a>
+          <a href="#cotizacion">Cotización</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Contacto</h3>
+          <a href="mailto:cotizaciones@ontheroadtosafety.com">cotizaciones@ontheroadtosafety.com</a>
+          <a href="tel:+59177787803">+591 77787803</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="muted">© <span id="year"></span> On The Road To Safety. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <button class="float-cta" type="button" id="float-cta" aria-label="Contactar por WhatsApp" aria-expanded="false">
+      <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </button>
+
+    <div class="wa-modal" id="wa-modal" hidden>
+      <div class="wa-dialog" role="dialog" aria-modal="true" aria-labelledby="wa-title" aria-describedby="wa-desc">
+        <h3 id="wa-title">¿Abrir WhatsApp?</h3>
+        <p class="muted" id="wa-desc">¿Estás seguro de comunicarte con On The Road To Safety?</p>
+        <div class="wa-actions">
+          <button class="btn btn-ghost" type="button" id="wa-cancel">Cancelar</button>
+          <button class="btn btn-primary" type="button" id="wa-confirm">Confirmar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wa-modal" id="instructor-modal" hidden>
+      <div
+        class="wa-dialog instructor-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="instructor-title"
+        aria-describedby="instructor-desc"
+      >
+        <div class="instructor-dialog-top">
+          <button class="instructor-close-x" type="button" id="instructor-close" aria-label="Cerrar">×</button>
+        </div>
+        <img class="instructor-photo" src="./assets/img/JHON2.png" alt="Foto del instructor" loading="lazy" decoding="async" />
+        <div class="instructor-meta">
+          <h3 id="instructor-title">JHON NEVER MANCACHI MAYTA</h3>
+          <a
+            class="instructor-role-link"
+            href="https://www.nsc.org/instructor-lookup/results?InstructorID=2306066"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instructor certificado (NSC)
+          </a>
+          <p class="muted" id="instructor-desc">DDC Professional Truck Driver Instructor LatAm.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="./script.js?v=20260218-1"></script>
+  </body>
+</html>

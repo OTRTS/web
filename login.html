@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b2a6f" />
+    <title>Iniciar sesión | On The Road To Safety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260216-7" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <main id="contenido">
+      <section class="section section-soft auth-section">
+        <div class="container auth-container">
+          <div class="card auth-card">
+            <img class="auth-logo" src="./assets/img/logo.png" alt="On The Road To Safety" />
+            <h1 class="auth-title">Iniciar sesión</h1>
+
+            <form class="form auth-form" method="post" action="#">
+              <div class="field">
+                <label for="usuario">Usuario</label>
+                <input id="usuario" name="usuario" type="text" autocomplete="username" required placeholder="Tu usuario" />
+              </div>
+
+              <div class="field">
+                <label for="password">Contraseña</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  placeholder="Tu contraseña"
+                />
+              </div>
+
+              <div class="form-actions auth-actions">
+                <button class="btn btn-primary" type="submit">Ingresar</button>
+                <a class="btn btn-secondary" href="./index.html">Volver al inicio</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
