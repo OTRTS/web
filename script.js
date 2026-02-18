@@ -1,6 +1,9 @@
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
+const host = String(location.hostname || "");
+const isStaticHost = /\.github\.io$/i.test(host);
+
 const toastEl = $("#toast");
 let toastTimeout = null;
 
@@ -80,12 +83,23 @@ const initMobileNav = () => {
   });
 };
 
+const initDisablePhpLinks = () => {
+  if (!isStaticHost) return;
+  const links = $$("a[href$='.php']");
+  links.forEach((a) => {
+    if (!(a instanceof HTMLAnchorElement)) return;
+    a.href = "#";
+    a.setAttribute("aria-disabled", "true");
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
+};
+
 const initAuthNav = () => {
   const authItems = $$("[data-auth]");
   if (!authItems.length) return;
 
-  const host = String(location.hostname || "");
-  const isStaticHost = /\.github\.io$/i.test(host);
   if (isStaticHost) {
     authItems.forEach((el) => {
       el.hidden = true;
@@ -1427,6 +1441,7 @@ const initCertificates = () => {
 initPageLoader();
 initYear();
 initMobileNav();
+initDisablePhpLinks();
 initAuthNav();
 initCotizacionesBell();
 initBrandReload();
