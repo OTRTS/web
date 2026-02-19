@@ -534,6 +534,7 @@ const initTipsCarousel = () => {
 const initCourseLinks = () => {
   const cards = $$(".course-card");
   if (!cards.length) return;
+  if (isStaticHost) return;
 
   const openPdf = (card) => {
     const url = card.getAttribute("data-pdf");
@@ -556,6 +557,51 @@ const initCourseLinks = () => {
   });
 };
 
+const initComingSoonCourses = () => {
+  if (!isStaticHost) return;
+  const modal = $("#coming-soon-modal");
+  const okBtn = $("#coming-soon-ok");
+  const closeBtn = $("#coming-soon-close");
+  if (!modal || !(okBtn instanceof HTMLElement) || !(closeBtn instanceof HTMLElement)) return;
+
+  const setOpen = (open) => {
+    modal.hidden = !open;
+    if (open) window.setTimeout(() => okBtn.focus(), 0);
+  };
+
+  okBtn.addEventListener("click", () => setOpen(false));
+  closeBtn.addEventListener("click", () => setOpen(false));
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) setOpen(false);
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hidden) setOpen(false);
+  });
+
+  const cards = $$(".course-card");
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(true);
+    });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setOpen(true);
+      }
+    });
+    const link = card.querySelector(".course-actions a");
+    if (link instanceof HTMLAnchorElement) {
+      link.href = "#";
+      link.removeAttribute("target");
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        setOpen(true);
+      });
+    }
+  });
+};
 const initFloatingCta = () => {
   const button = $("#float-cta");
   const modal = $("#wa-modal");
@@ -1450,6 +1496,7 @@ initRevealOnScroll();
 initAutoplayVideosInView();
 initTipsCarousel();
 initCourseLinks();
+initComingSoonCourses();
 initFloatingCta();
 initInstructorModal();
 initAiChat();
