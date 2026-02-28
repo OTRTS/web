@@ -15,7 +15,16 @@ if ($apiKey === '') {
     $apiKey = (string) getenv('GEMINI_API_KEY');
 }
 if ($apiKey === '') {
-    json_response(['ok' => false, 'error' => 'missing_api_key'], 500);
+    $msg = mb_substr($message ?? '', 0, 260, 'UTF-8');
+    $msg = trim($msg) !== '' ? $msg : 'tu consulta';
+    $fallback = "Voy a responder sin conectarme al motor de IA.\n\nLo que me comentas es: \"{$msg}\".\n\nPuedo orientarte sobre cursos, metodología, certificados o cotización y darte ideas para reducir riesgos en ruta, organizar la capacitación y obtener evidencias. Cuéntame un poco más qué necesitas lograr.";
+    json_response([
+        'ok' => true,
+        'text' => $fallback,
+        'model' => null,
+        'degraded' => true,
+        'error' => 'missing_api_key',
+    ], 200);
 }
 
 $raw = file_get_contents('php://input');
@@ -74,7 +83,7 @@ foreach ($models as $model) {
         'contents' => $contents,
         'generationConfig' => [
             'temperature' => 0.4,
-            'maxOutputTokens' => 650,
+            'maxOutputTokens' => 480,
         ],
     ];
 
@@ -88,8 +97,10 @@ foreach ($models as $model) {
         CURLOPT_POST => true,
         CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
         CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_UNICODE),
-        CURLOPT_CONNECTTIMEOUT => 12,
-        CURLOPT_TIMEOUT => 25,
+        CURLOPT_CONNECTTIMEOUT => 10,
+        CURLOPT_TIMEOUT => 20,
+        // En local (XAMPP) a veces falla SSL sin certificado configurado
+        CURLOPT_SSL_VERIFYPEER => false,
     ]);
 
     $resp = curl_exec($ch);
@@ -136,4 +147,27 @@ foreach ($models as $model) {
     json_response(['ok' => true, 'text' => $text, 'model' => $model], 200);
 }
 
-json_response(['ok' => false, 'error' => $lastError['type'], 'details' => $lastError['message']], 502);
+// Modo degradado: si el modelo falla, devolvemos un mensaje útil sin romper el front
+$details = '';
+if (is_array($lastError)) {
+    $t = isset($lastError['type']) ? (string)$lastError['type'] : '';
+    $m = isset($lastError['message']) ? (string)$lastError['message'] : '';
+    $parts = [];
+    if ($t !== '') $parts[] = $t;
+    if ($m !== '') $parts[] = $m;
+    $details = implode(' - ', $parts);
+}
+
+$msg = mb_substr($message, 0, 260, 'UTF-8');
+if (trim($msg) === '') {
+    $msg = 'tu consulta';
+}
+$fallback = "Voy a responder sin conectarme al motor de IA.\n\nMe comentas: \"{$msg}\".\n\nPuedo ayudarte con cursos, metodología, certificados o cotización, y darte recomendaciones para mejorar seguridad vial, reducir incidentes y organizar la capacitación. Si buscas precios/horarios, te puedo guiar para gestionarlo por WhatsApp.";
+
+json_response([
+    'ok' => true,
+    'text' => $fallback,
+    'model' => null,
+    'degraded' => true,
+    'error' => $details,
+], 200);

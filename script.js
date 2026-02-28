@@ -17,6 +17,30 @@ const showToast = (message) => {
   }, 2400);
 };
 
+const initForceScrollTop = () => {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  
+  const forceTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    if (document.body) document.body.scrollTop = 0;
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+  };
+
+  forceTop();
+
+  // Asegurar que se quede arriba incluso si hay hash
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+  
+  // Reintentar varias veces para asegurar que el navegador no restaure la posición
+  window.requestAnimationFrame(forceTop);
+  window.setTimeout(forceTop, 10);
+  window.setTimeout(forceTop, 50);
+};
+
 const initYear = () => {
   const year = $("#year");
   if (year) year.textContent = String(new Date().getFullYear());
@@ -532,6 +556,9 @@ const initTipsCarousel = () => {
 };
 
 const initCourseLinks = () => {
+  // Deshabilitado temporalmente por "Muy pronto"
+  return;
+
   const cards = $$(".course-card");
   if (!cards.length) return;
   if (isStaticHost) return;
@@ -558,7 +585,7 @@ const initCourseLinks = () => {
 };
 
 const initComingSoonCourses = () => {
-  if (!isStaticHost) return;
+  // if (!isStaticHost) return;
   const modal = $("#coming-soon-modal");
   const okBtn = $("#coming-soon-ok");
   const closeBtn = $("#coming-soon-close");
@@ -1484,6 +1511,7 @@ const initCertificates = () => {
   });
 };
 
+initForceScrollTop();
 initPageLoader();
 initYear();
 initMobileNav();

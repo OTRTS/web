@@ -1,0 +1,3 @@
+config.local.php
+.sessions/
+.DS_Store
